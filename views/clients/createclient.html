@@ -97,7 +97,7 @@
 
 	            <div class="col-sm-3">
 	                <input type="text" id="mobileNo" name="mobileNo" ng-model="formData.mobileNo"
-	                       ng-pattern="/^[0-9]+$/" required min=10 max=10 class="form-control"/>
+	                       ng-pattern="/^[0-9]+$/" required ng-minlegth=10 ng-maxlength=10 class="form-control"/>
 	            </div>
 	            <div class="col-sm-2">
 	                    <span ng-show="createclientform.mobileNo.$invalid && createclientform.mobileNo.$dirty">
@@ -114,7 +114,7 @@
 	            <label class="control-label col-sm-2" for="mobileNo">{{'Email Address' | translate}}</label>
 
 	            <div class="col-sm-3">
-	                <input type="text" id="emailAddress" name="emailAddress" required ng-model="formData.emailAddress"
+	                <input type="email" id="emailAddress" name="emailAddress" required ng-model="formData.emailAddress" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/"
 	                         class="form-control"/>
 	            </div>
               <label class="control-label col-sm-2">{{'Religion' | translate}}</label>
