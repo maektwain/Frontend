@@ -50,7 +50,20 @@
 	            <div class="col-sm-3">
 	                <input id="middlename" type="text" ng-model="formData.middlename" class="form-control">
 	            </div>
+
 	        </div>
+
+        <div class="form-group">
+         <label class="control-label col-sm-2">{{'Education Type' | translate}}</label>
+          <div class="col-sm-3">
+            <select id="educationId" ng-model="formData.educationId"  class="form-control"
+                    ng-options="education.id as education.name for education in educationOptions" value="{{education.id}}">
+                <option value="">--{{'Education' | translate}}--</option>
+            </select>
+
+          </div>
+      </div>
+    
 	        <div class="form-group">
 	            <label class="control-label col-sm-2">{{ 'label.input.lastname' | translate }}:<span
 	                    class="required">*</span></label>
@@ -71,9 +84,14 @@
 	                <input type="text" id="fathername" name="fathername" ng-model="formData.fathername"  class="form-control" required
 	                       late-Validate/>
 	            </div>
-	            <div class="col-sm-3">
-	                <form-validate valattributeform="editclientform" valattribute="fathername"/>
-	            </div>
+              <label class="control-label col-sm-2">{{'Dependents' | translate}}</label>
+              <div class="col-sm-3">
+                <select id="religionId" ng-model="formData.dependentId"  class="form-control"
+                        ng-options="dependent.id as dependent.name for dependent in dependentOptions" value="{{dependent.id}}">
+                    <option value="">--{{'Dependents' | translate}}--</option>
+                </select>
+
+              </div>
 	        </div>
           <div class="form-group">
               <label class="control-label col-sm-2" for="mobileNo">{{'Email Address' | translate}}</label>
@@ -95,7 +113,7 @@
 	            </div>
 	        </div>
 			<div class="form-group">
-			    <label class="control-label col-sm-2">{{ 'label.input.externalid' | translate }}:</label>
+			    <label class="control-label col-sm-2">{{ 'Pan Card' | translate }}:</label>
 
 			    <div class="col-sm-3">
 			        <input id="externalId" type="text" ng-model="formData.externalId" class="form-control">
@@ -124,7 +142,7 @@
 			    </div>
 			</div>
 	        <div class="form-group">
-	            <label class="control-label col-sm-2">{{'label.input.clienttype' | translate}}</label>
+	            <label class="control-label col-sm-2">{{'Client Category' | translate}}</label>
 
 	            <div class="col-sm-3">
 	                <select id="clientTypeId" ng-model="formData.clientTypeId"  class="form-control"
@@ -154,7 +172,7 @@
 	            </div>
 	        </div>
           <div class="form-group">
-          <label class="control-label col-sm-2">{{'Marital Stat'}}</label>
+          <label class="control-label col-sm-2">{{'Marital Status'}}</label>
 
           <div class="col-sm-3">
               <select id="maritalId" ng-model="formData.maritalId"  class="form-control"

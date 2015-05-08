@@ -12,6 +12,7 @@
         <tr class="graybg">
             <th>{{ 'label.heading.name' | translate }}</th>
             <th>{{ 'label.heading.isLoanOfficer' | translate }}</th>
+            <th>{{'Is Direct Sales Associate'}}</th>
             <th>{{ 'label.heading.office' | translate }}</th>
             <th>{{ 'label.active' | translate }}</th>
         </tr>
@@ -20,6 +21,7 @@
         <tr class="pointer-main" ng-repeat="employee in employees | filter:filterText">
             <td class="pointer" data-ng-click="routeTo(employee.id)">{{employee.displayName}}</td>
             <td class="pointer" data-ng-click="routeTo(employee.id)">{{employee.isLoanOfficer}}</td>
+            <td class="pointer" data-ng-click="routeTo(employee.id)">{{employee.isDsa}}</td>
             <td class="pointer" data-ng-click="routeTo(employee.id)">{{employee.officeName}}</td>
             <td class="pointer" data-ng-click="routeTo(employee.id)">{{employee.isActive}}</td>
         </tr>
